@@ -16,9 +16,10 @@
     height: 60px;
     background-color: rgb(194, 0, 0);
 }
-#logo > img{
+#logo > a img{
     width: 170px;
     height: 100px;
+    margin-top: 5px;
 }
 #search{
     display: flex;
@@ -41,8 +42,10 @@
     width: 25px;
     margin: 10px;
 }
-#search > div:nth-child(1)> p{
+#search > div:nth-child(1)> a{
     width: 90px;
+    color: black;
+    text-decoration: none;
 }
 #search > div:nth-child(1)> select{
     width: 15px;
@@ -113,7 +116,7 @@
     margin: 5px;
     mix-blend-mode: multiply;
 }
-#cart{
+#cartlogo{
     display: flex;
     align-items: center;
     height: 50px;
@@ -121,12 +124,12 @@
     border-radius: 3px;
     background-color: rgb(255, 208, 0);
 }
-#cart > h2{
+#cartlogo > h2{
     width: 20px;
     margin: 5px;
     margin-right: 20px;
 }
-#cart > img{
+#cartlogo >a img{
     width: 25px;
     height: 25px;
     margin-left: 5px;
@@ -135,6 +138,7 @@
 
 #menu{
     display: flex;
+    align-items: center;
 }
 #menu > div{
     border-right: 1px solid rgb(175, 175, 175);
@@ -143,6 +147,13 @@
     padding: 0px 20px;
     font-size: 14px;
     text-align: center;
+}
+#menu > div >a{
+    color: black;
+    font-size: 14px;
+    display: block;
+    padding: 14px 0px;
+    text-decoration: none;
 }
 #menu > div:hover{
     background-color: rgb(224, 222, 222);
@@ -368,6 +379,7 @@
     width: 23%;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     border-radius: 10px;
+    background-color: white;
 }
 .hood-card:hover{
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -378,6 +390,7 @@
     height: 250px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    border-bottom: 1px solid rgb(167, 167, 167);
 }
 .hood-card >h2{
     text-align: center;
@@ -389,3 +402,42 @@
     padding: 0px 10px;
     font-size: 20px;
 }
+
+#bottom{
+    background-color: rgb(49, 49, 49);
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+    margin-top: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+#btm-data{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+#btm-data> div:nth-child(1) >h3{
+    width: 210px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+    border-bottom: 4px solid rgb(255, 208, 0);
+}
+#btm-data> div:nth-child(2) >h3{
+    width: 110px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+    border-bottom: 4px solid rgb(255, 208, 0);
+}
+#btm-data> div:nth-child(3) >h3{
+    width: 230px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+    border-bottom: 4px solid rgb(255, 208, 0);
+}
+#btm-data> div >p{
+    font-size: 17px;
+}
+
