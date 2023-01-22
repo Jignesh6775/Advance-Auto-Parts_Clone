@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+body{
+    background-image: url(https://as1.ftcdn.net/v2/jpg/03/14/75/86/1000_F_314758690_PxHYLDU06q1aJPahcDkEbd9HPGRiEysT.jpg);
+}
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    background-color: rgb(202, 35, 35);
+}
+#logo > a img{
+    width: 200px;
+    margin-top: 5px;
+}
+#back_button{
+    background-color: #ff4040;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+form>h1{
+    text-align: center;
+}
+
+#checkout{
+    background-color: #ffee00;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 650px;
+    width: 40%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px 60px;
+}
+
+form input{
+   height: 25px;
+   border: none;
+   border-radius: 20px;
+   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+   padding-left: 10px;
+}
+
+label{
+    font-weight: 600;
+}
+
+#confbutt{
+background-color: #e40000;
+  border-radius: 20px;
+  font-size: 17px;
+  color: white;
+  margin: 5px;
+  padding: 10px 15px;
+  text-align: center;
+  border: none;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+#conf{
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div id="logo">
+            <a href="/index.html"><img src="/Picsart_23-01-20_16-48-26-255.png" alt=""></a>
+        </div>
+    <a href="cart.html"><button id="back_button">Cancel Payment</button></a>
+    <div id="checkout">
+        <form >
+            <h1>Payment Process</h1>
+            <label>Full Address with Postal PIN</label>
+            <input type="text">
+            <label>Card Number (Credit/Debit)</label>
+            <input type="number">
+            <label>Cardholder's Name</label>
+            <input type="text">
+            <label>Expiry Date</label>
+            <input type="date">
+            <label>CVV</label>
+            <input type="password">
+            <label>OTP</label>
+            <input type="password">
+            <div id="conf">
+                 <button onclick="confirm();" id="confbutt">Confirm Payment</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    function confirm()
+    {
+        alert("Your order has been placed!!")
+    }
+</script>

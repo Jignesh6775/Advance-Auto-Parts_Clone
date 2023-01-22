@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        #main-div{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #reg-img >img{
+            width: 520px;
+            height: 550px;
+        }
+        form  {
+            padding: 20px;
+            margin-left: -10px;
+        }
+        form >input{
+            border-radius: 20px;
+            border: 1px solid gray;
+        }
+        #container{
+            height: 550px;
+            width: 40%;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            background-image: url(https://static.wixstatic.com/media/909414_22042210d4994d849c93701d8de36825~mv2.jpg/v1/crop/x_704,y_0,w_1593,h_2002/fill/w_598,h_704,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Clock%252520Gears_edited_edited.jpg);
+        }
+        .abcde{
+            height: 50px;
+            width: 97.2%;
+            border: 1px solid #f5f5f5;
+             font-size: 18px;
+             font-weight: 600;
+             color: rgb(1, 8, 109);
+             border-bottom: 2px solid rgb(151, 151, 151);
+             text-align: center;
+             border-radius: 5px;
+             padding-left: 15px;
+             }
+             .abcde>h2{
+                margin-top: 5px;
+             }
+
+             .reg{
+                 padding: 8px;
+                 margin-top: 20px;
+                 margin-bottom: 10px;
+                 margin-left: 30px;
+                 margin-right: 20px;
+                 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+             }
+             .but{
+                padding: 10px 200px;
+                 margin-top: 10px;
+                 margin-bottom: 5px;
+                 background: #e42529;
+                 color: white;
+                 margin-left: 28px;
+                 text-align: center;
+                 border-radius: 5px;
+                 border: none;
+                 border-radius: 20px;
+                 font-size: 15px;
+                 width: 85%;
+                 box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+             }
+             .e{
+                padding: 10px;
+                 margin-top: 10px;
+                 margin-bottom: 5px;
+                 background: white;
+                 color: #e42529;
+                 margin-left:30px;
+                 text-align: center;
+                 border-radius: 20px;
+                 border: none;
+                 border: 1px solid  #e42529 ;
+             }
+
+
+             /* ***********************************************&&&********************************************** */
+             *{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#nav{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(49, 49, 49);
+    /* position:fixed;
+    z-index: 1; */
+}
+#logo{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: rgb(194, 0, 0);
+}
+#logo > a img{
+    width: 170px;
+    height: 100px;
+    margin-top: 5px;
+}
+#search{
+    display: flex;
+    align-items: center;
+    margin: 5px 5px;
+    height: 50px;
+    width: 790px;
+    background-color: white;
+    border-radius: 3px;
+}
+#search >  div:nth-child(1){
+    display: flex;
+    height: 40px;
+    margin: 5px 5px;
+    align-items: center;
+    border-radius: 3px;
+    background-color: rgb(255, 208, 0);
+}
+#search > div:nth-child(1) >img{
+    width: 25px;
+    margin: 10px;
+}
+#search > div:nth-child(1)> a{
+    width: 90px;
+    color: black;
+    text-decoration: none;
+}
+#search > div:nth-child(1)> select{
+    width: 15px;
+    border: none;
+    margin-left: 20px;
+    background-color: rgb(255, 208, 0);
+}
+#search > div:nth-child(2){
+    width: 600px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid;
+}
+#search > div:nth-child(2) input{
+    width: 500px;
+    font-size: 15px;
+    border: none;
+    border-radius: 3px;
+}
+#search > div:nth-child(2) button{
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(255, 208, 0);
+}
+#search > div:nth-child(2) img{
+    width: 20px;
+    mix-blend-mode: multiply;
+    color:  rgb(255, 208, 0);
+}
+#location{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin: 5px; 
+    border-radius: 3px;
+    background-color: rgb(255, 208, 0);
+}
+#location > p{
+    width: 110px;
+    margin: 7px;
+}
+#location > img{
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    margin-left: 10px;
+    mix-blend-mode: multiply;
+}
+a #account{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin: 5px;
+    border-radius: 3px;
+    background-color: rgb(255, 208, 0);
+    text-decoration: none;
+}
+a #account >p{
+    margin: 10px;
+    color: black;
+    text-decoration: none;
+}
+a #account > img{
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    mix-blend-mode: multiply;
+}
+#cartlogo{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin: 5px;
+    border-radius: 3px;
+    background-color: rgb(255, 208, 0);
+}
+#cartlogo > h2{
+    width: 20px;
+    margin: 5px;
+    margin-right: 20px;
+}
+#cartlogo >a img{
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    mix-blend-mode: multiply;
+}
+
+#menu{
+    display: flex;
+    align-items: center;
+}
+#menu > div{
+    border-right: 1px solid rgb(175, 175, 175);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0px 20px;
+    font-size: 14px;
+    text-align: center;
+}
+#menu > div >a{
+    color: black;
+    font-size: 14px;
+    display: block;
+    padding: 14px 0px;
+    text-decoration: none;
+}
+#menu > div:hover{
+    background-color: rgb(224, 222, 222);
+    cursor: pointer;
+}
+#menu1{
+    display: flex;
+    align-items: center;
+}
+#menu1 > img{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+#menu >div:nth-child(6){
+    color: rgb(196, 3, 3);
+    font-weight: bolder;
+}
+#menu >div:nth-child(7){
+    border: none;
+}
+#menuitem{
+    position: relative; 
+}
+
+#submenu{
+    position: absolute;
+    width: 120px;
+    text-align: left;
+    top: 100%;
+    display: none;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    background-color: white;
+    z-index: 11;
+}
+.submenuitem{
+    height: 10px;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#menuitem:hover #submenu{
+    display: block;
+}
+.submenuitem:hover{
+    background-color: rgb(224, 222, 222);
+    cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+    <div id="nav" data-spy="affix" data-offset-top="197">
+        <div id="logo">
+            <a href="/index.html"><img src="/Picsart_23-01-20_16-48-26-255.png" alt=""></a>
+        </div>
+        <div id="search">
+            <div>
+                <img src="https://cdn-icons-png.flaticon.com/512/48/48688.png" alt="">
+                <!-- <p>Add a vehicle</p> -->
+                <a href="/index.html">Add a vehicle</a>
+                <select></select>
+            </div>
+            <div>
+                <form>
+                    <input placeholder="What part do you need today?" type="text">
+                </form>
+                <button type="submit"><img src="https://cdn-icons-png.flaticon.com/512/16/16492.png" alt=""></button>
+            </div>
+        </div>
+        <div id="location">
+            <img src="https://cdn-icons-png.flaticon.com/512/3179/3179068.png" alt="">
+            <p>Choose a Store</p>
+        </div>
+        <a href="/login.html">
+            <div id="account">
+                <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="">
+                <p>Account</p>
+            </div>
+        </a>
+        <div id="cartlogo">
+            <a href="/cart.html"><img src="https://cdn-icons-png.flaticon.com/512/34/34568.png" alt=""></a>
+            <h2 id="item-number">0</h2>
+        </div>
+    </div>
+    <div id="menu">
+        <div id="menuitem">
+            <div id="menu1">
+                <img src="https://cdn-icons-png.flaticon.com/512/9121/9121524.png" alt="">
+            <p>Show All</p>
+            </div>
+            <div id="submenu">
+                <div class="submenuitem">
+                    <p>Air & Fuel</p>
+                    <h3>></h3>
+                </div>
+                <div class="submenuitem">
+                   <p> Accessories</p>
+                   <h3>></h3>
+                </div>
+                <div class="submenuitem">
+                    <p>Battery</p>
+                    <h3>></h3>
+                </div>
+                <div class="submenuitem">
+                    <p>Brakes</p>
+                    <h3>></h3>
+                </div>
+                <div class="submenuitem">
+                    <p>Cooling</p>
+                    <h3>></h3>
+                </div>
+                <div class="submenuitem">
+                    <p>Navigation</p> 
+                    <h3>></h3>
+                </div>
+                <div class="submenuitem">
+                    <p>Engines</p>
+                    <h3>></h3>
+                </div>
+                <div class="submenuitem">
+                    <p>Tools</p>
+                    <h3>></h3>
+                </div>
+                <div class="submenuitem">
+                    <p>Transmission</p>
+                    <h3>></h3>
+                </div>
+            </div>
+        </div>
+        <div>
+            <!-- <p>Replacement Parts</p> -->
+            <a href="/product.html">Replacement Parts</a>
+        </div>
+        <div>
+            <a href="/product.html">Performance Parts</a>
+        </div>
+        <div>
+            <a href="/product.html">Accessories</a>
+        </div>
+        <div>
+            <a href="/product.html">Oil & Fluids</a>
+        </div>
+        <div>
+            <p>Special Offers</p>
+        </div>
+        <div>
+            <p>Order Lookup</p>
+        </div>
+    </div>
+       
+    <div id="main-div">
+        <div id="reg-img">
+            <img src="https://shop.advanceautoparts.com/images/speedperks-rewards-banner.png" alt="">
+        </div>
+        <div id="container">
+            <div class="abcde">
+            <h2>Sign Up</h2>
+            </div>
+        <form id="form">
+            <input class="reg" type="text" name="firstname" id="firstname" placeholder="First Name" size="60"/> 
+            <br>
+            <input class="reg" type="text" name="lastname" id="lastname" placeholder="Last Name" size="60"/>
+            <br>
+            <input class="reg" type="text" name="email"  id="email" placeholder="Email Address" size="60"/>
+            <br>
+            <input class="e" type="submit" value="Check Email"/>
+            <br>
+            <input class="reg" type="password" name="password" id="password" placeholder="Password" size="60"/>
+            <br>
+            <input class="reg" type="password" name="confirmpassword" id="confirm" placeholder="Confirm Password" size="60"/>
+            <br> 
+            <input class="reg" type="text" name="mobile" id="mobile" placeholder="Mobile Number" size="60"/>
+            <br>
+            <input  class="but" type="submit" value="Sign Up" size="100"/>
+        </form>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("#form").addEventListener("submit",myFunction)
+
+    var usersArray = JSON.parse(localStorage.getItem("allUsers")) || []
+    function myFunction(){
+        event.preventDefault();
+        var userEmail=document.querySelector("#email").value;
+        var userpassword=document.querySelector("#password").value;
+        var userConfirmPassword=document.querySelector("#confirm").value;
+        if(userpassword!==userConfirmPassword){
+            alert("YOUR PASSWORD DIDN'T MATCH")
+            return;
+        }
+
+        for(let i=0;i<usersArray.length;i++){
+            var email=usersArray[i].email
+            if(email===userEmail){
+                return alert("YOU HAVE ALREADY REGISTERED")
+                window.location.href="index.html"
+            }
+            else{
+                return  alert("PLEASE REGISTER FIRST")
+            }
+            
+        }
+
+        var userObj = {
+        firstname: document.querySelector("#firstname").value,
+        lastname: document.querySelector("#lastname").value,
+        email: document.querySelector("#email").value,
+        password :document.querySelector("#password").value,
+        mobile :document.querySelector("#mobile").value,
+        };
+        usersArray.push(userObj);
+        localStorage.setItem("allUsers",JSON.stringify(usersArray))
+        window.location.href="login.html"
+
+    }
+</script>

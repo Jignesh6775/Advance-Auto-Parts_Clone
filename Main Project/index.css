@@ -1,0 +1,446 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#nav{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(49, 49, 49);
+    /* position:fixed;
+    z-index: 1; */
+}
+#logo{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: rgb(194, 0, 0);
+}
+#logo > a img{
+    width: 170px;
+    height: 100px;
+    margin-top: 5px;
+}
+#search{
+    display: flex;
+    align-items: center;
+    margin: 5px 5px;
+    height: 50px;
+    width: 790px;
+    background-color: white;
+    border-radius: 3px;
+}
+#search >  div:nth-child(1){
+    display: flex;
+    height: 40px;
+    margin: 5px 5px;
+    align-items: center;
+    border-radius: 3px;
+    background-color: rgb(255, 208, 0);
+}
+#search > div:nth-child(1) >img{
+    width: 25px;
+    margin: 10px;
+}
+#search > div:nth-child(1)> a{
+    width: 90px;
+    color: black;
+    text-decoration: none;
+}
+#search > div:nth-child(1)> select{
+    width: 15px;
+    border: none;
+    margin-left: 20px;
+    background-color: rgb(255, 208, 0);
+}
+#search > div:nth-child(2){
+    width: 600px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border: 1px solid;
+}
+#search > div:nth-child(2) input{
+    width: 550px;
+    padding-top: 5px;
+    height: 30px;
+    font-size: 15px;
+    border: none;
+    border-radius: 3px;
+}
+#search > div:nth-child(2) button{
+    width: 40px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(255, 208, 0);
+}
+#search > div:nth-child(2) img{
+    width: 20px;
+    mix-blend-mode: multiply;
+    color:  rgb(255, 208, 0);
+}
+#location{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin: 5px; 
+    border-radius: 3px;
+    background-color: rgb(255, 208, 0);
+}
+#location > p{
+    width: 110px;
+    margin: 7px;
+}
+#location > img{
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    margin-left: 10px;
+    mix-blend-mode: multiply;
+}
+a #account{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin: 5px;
+    border-radius: 3px;
+    background-color: rgb(255, 208, 0);
+    text-decoration: none;
+}
+a #account >p{
+    margin: 10px;
+    color: black;
+    text-decoration: none;
+}
+a #account > img{
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    mix-blend-mode: multiply;
+}
+#cartlogo{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin: 5px;
+    border-radius: 3px;
+    background-color: rgb(255, 208, 0);
+}
+#cartlogo > h2{
+    width: 20px;
+    margin: 5px;
+    margin-right: 20px;
+}
+#cartlogo >a img{
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    mix-blend-mode: multiply;
+}
+
+#menu{
+    display: flex;
+    align-items: center;
+}
+#menu > div{
+    border-right: 1px solid rgb(175, 175, 175);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0px 20px;
+    font-size: 14px;
+    text-align: center;
+}
+#menu > div >a{
+    color: black;
+    font-size: 14px;
+    display: block;
+    padding: 14px 0px;
+    text-decoration: none;
+}
+#menu > div:hover{
+    background-color: rgb(224, 222, 222);
+    cursor: pointer;
+}
+#menu1{
+    display: flex;
+    align-items: center;
+}
+#menu1 > img{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+#menu >div:nth-child(6){
+    color: rgb(196, 3, 3);
+    font-weight: bolder;
+}
+#menu >div:nth-child(7){
+    border: none;
+}
+#menuitem{
+    position: relative; 
+}
+
+#submenu{
+    position: absolute;
+    width: 120px;
+    text-align: left;
+    top: 100%;
+    display: none;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    background-color: white;
+    z-index: 11;
+}
+.submenuitem{
+    height: 10px;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#menuitem:hover #submenu{
+    display: block;
+}
+.submenuitem:hover{
+    background-color: rgb(224, 222, 222);
+    cursor: pointer;
+}
+#top-body{
+    height: 450px;
+    margin-top: 0px;
+    padding-top: 10px;
+    border-bottom-left-radius: 30px;
+    background-color: rgb(49, 49, 49);
+}
+#banner{
+    display: flex;
+    width: 98%;
+    clip-path: polygon(2% 0, 70% 0%, 100% 0, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0 10%);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 25px;
+    background-color: white;
+    
+}
+#banner > div:nth-child(1){
+    width: 60%;
+    padding: 10px 30px;
+}
+#banner > div:nth-child(1) >h1{
+    font-size: 50px;
+}
+#banner > div:nth-child(1) >h3{
+    font-size: 20px;
+}
+#banner > div:nth-child(1) >button{
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-weight: bold;
+    background-color: rgb(255, 208, 0);
+    border: none;
+}
+#banner > div:nth-child(2){
+    clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+#cards{
+    display: flex;
+    width: 100%
+}
+.card-in{
+    width: 32%;
+    height: 90px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+    background-color: white;
+    clip-path: polygon(4% 0, 70% 0%, 100% 0, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0 25%);
+}
+.card-in:hover{
+    background-color: rgb(235, 235, 235);
+    cursor: pointer;
+}
+.card-in:nth-child(1){
+    margin-left: 25px;
+}
+.heading{
+    height: 20px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.heading >img{
+    width: 30px;
+    height: 30px;
+    margin: 2px 10px;
+}
+.card-in > div > p{
+    margin: 5px 10px 5px 20px;
+}
+#top-cate{
+    background-color: rgb(218, 218, 218);
+    padding: 20px;
+}
+#top-cate > p{
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom: 0px;
+}
+#top-cate > p span{
+    font-weight: 10;
+}
+#top-cate >hr{
+    border: 1px solid rgb(170, 170, 170);
+    margin: 0px;
+}
+.cate-cont{
+    display: flex;
+    margin-top: 15px;
+}
+.cate-card{
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+    background-color: white;
+    clip-path: polygon(10% 0, 100% 0, 100% 20%, 100% 100%, 80% 100%, 0 100%, 0% 80%, 0 12%);
+}
+.cate-img{
+    padding: 20px 30px;
+}
+.cate-img >img{
+    width: 120px;
+    margin: 10px 0px 0px 10px ;
+}
+.cate-img > h2{
+    margin-top: 10%;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+#perks{
+    display: flex;
+    justify-content: space-evenly;
+}
+.perk-card{
+    background-color: rgb(15, 15, 15);
+    color: white;
+    width: 200px;
+    padding: 5px 10px;
+    border-bottom: 5px solid rgb(255, 217, 0);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.perk-card:hover{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    cursor: pointer;
+}
+.perk-card >div{
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+.perk-card > div> div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgb(255, 217, 0);
+    border-radius: 50%;
+    width: 55px;
+    height: 35px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+.perk-card > div> div >img{
+    width: 20px;
+    filter: invert(100%);
+}
+.perk-card > div> h2{
+    color: rgb(255, 217, 0);
+}
+.perk-card >p{
+    margin-top: 0px;
+    width: 80%;
+}
+
+#under-hood >p{
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom: 0px;
+}
+#under-hood >p span{
+    font-weight: 10;
+}
+#under-hood >hr{
+    border: 1px solid rgb(170, 170, 170);
+}
+#inside-hood{
+    display: flex;
+    justify-content: space-evenly;
+}
+.hood-card{
+    width: 23%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 10px;
+    background-color: white;
+}
+.hood-card:hover{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    cursor: pointer;
+}
+.hood-card > div > img{
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid rgb(167, 167, 167);
+}
+.hood-card >h2{
+    text-align: center;
+    padding: 0px 10px;
+    font-size: 25px;
+}
+.hood-card >p{
+    text-align: center;
+    padding: 0px 10px;
+    font-size: 20px;
+}
+
+#bottom{
+    background-color: rgb(49, 49, 49);
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+    margin-top: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+#btm-data{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+#btm-data> div:nth-child(1) >h3{
+    width: 210px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+    border-bottom: 4px solid rgb(255, 208, 0);
+}
+#btm-data> div:nth-child(2) >h3{
+    width: 110px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+    border-bottom: 4px solid rgb(255, 208, 0);
+}
+#btm-data> div:nth-child(3) >h3{
+    width: 230px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+    border-bottom: 4px solid rgb(255, 208, 0);
+}
+#btm-data> div >p{
+    font-size: 17px;
+}
+

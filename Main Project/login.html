@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+
+        #container{
+           
+            display: flex;
+           height: 400px;
+           justify-content: flex-end;
+           align-items: center;
+           background-image: url(https://s3.amazonaws.com/fzautomotive/dealers/5e8df910357b5.jpeg);
+        }
+        .boxkg{
+           background-image: url(https://www.seekpng.com/png/full/422-4221431_white-background-with-vignette.png);
+           background-color: white;
+           border-radius: 10px;
+            padding-left: 20px;
+            margin-right: 50px;
+            height: 250px;
+            width: 34%;
+            position: relative;
+            justify-content: center;
+            box-shadow: rgba(255, 255, 255, 0.25) 0px 3px 8px;
+        }
+        .boxkg >div >h1{
+            text-align: center;
+        }
+        form{
+            padding: 10px;
+            height: 90%;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #email{
+            padding: 10px;
+            font-size: 15px;
+            border: none;
+            border-radius: 20px;
+            width: 90%;
+        }
+        #cont{
+            background: #e42529;
+            color: white;
+            padding: 8px 162px;
+            border-radius: 20px;
+            margin-top: 10px;
+            border-color: white;
+            font-size: 16px;
+            width: 95%;
+        }
+        .p1{
+            display: inline-block;
+            position: absolute;
+            bottom: 25px;
+            left: 80px;
+            color: rgb(60, 60, 60);
+            font-weight: bold;
+        }
+        .reg{
+            color: rgb(255, 6, 6);
+        }
+       
+/* ********************************************NAV-BAR****************************************** */
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#nav{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(49, 49, 49);
+    /* position:fixed;
+    z-index: 1; */
+}
+#logo{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: rgb(194, 0, 0);
+}
+#logo > a img{
+    width: 170px;
+    height: 100px;
+    margin-top: 5px;
+}
+#search{
+    display: flex;
+    align-items: center;
+    margin: 5px 5px;
+    height: 50px;
+    width: 790px;
+    background-color: white;
+    border-radius: 3px;
+}
+#search >  div:nth-child(1){
+    display: flex;
+    height: 40px;
+    margin: 5px 5px;
+    align-items: center;
+    border-radius: 3px;
+    background-color: rgb(255, 208, 0);
+}
+#search > div:nth-child(1) >img{
+    width: 25px;
+    margin: 10px;
+}
+#search > div:nth-child(1)> a{
+    width: 90px;
+    color: black;
+    text-decoration: none;
+}
+#search > div:nth-child(1)> select{
+    width: 15px;
+    border: none;
+    margin-left: 20px;
+    background-color: rgb(255, 208, 0);
+}
+#search > div:nth-child(2){
+    width: 600px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid;
+}
+#search > div:nth-child(2) input{
+    width: 500px;
+    font-size: 15px;
+    border: none;
+    border-radius: 3px;
+}
+#search > div:nth-child(2) button{
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(255, 208, 0);
+}
+#search > div:nth-child(2) img{
+    width: 20px;
+    mix-blend-mode: multiply;
+    color:  rgb(255, 208, 0);
+}
+#location{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin: 5px; 
+    border-radius: 3px;
+    background-color: rgb(255, 208, 0);
+}
+#location > p{
+    width: 110px;
+    margin: 7px;
+}
+#location > img{
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    margin-left: 10px;
+    mix-blend-mode: multiply;
+}
+a #account{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin: 5px;
+    border-radius: 3px;
+    background-color: rgb(255, 208, 0);
+    text-decoration: none;
+}
+a #account >p{
+    margin: 10px;
+    color: black;
+    text-decoration: none;
+}
+a #account > img{
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    mix-blend-mode: multiply;
+}
+#cartlogo{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin: 5px;
+    border-radius: 3px;
+    background-color: rgb(255, 208, 0);
+}
+#cartlogo > h2{
+    width: 20px;
+    margin: 5px;
+    margin-right: 20px;
+}
+#cartlogo >a img{
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    mix-blend-mode: multiply;
+}
+
+#menu{
+    display: flex;
+    align-items: center;
+}
+#menu > div{
+    border-right: 1px solid rgb(175, 175, 175);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0px 20px;
+    font-size: 14px;
+    text-align: center;
+}
+#menu > div >a{
+    color: black;
+    font-size: 14px;
+    display: block;
+    padding: 14px 0px;
+    text-decoration: none;
+}
+#menu > div:hover{
+    background-color: rgb(224, 222, 222);
+    cursor: pointer;
+}
+#menu1{
+    display: flex;
+    align-items: center;
+}
+#menu1 > img{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+#menu >div:nth-child(6){
+    color: rgb(196, 3, 3);
+    font-weight: bolder;
+}
+#menu >div:nth-child(7){
+    border: none;
+}
+#menuitem{
+    position: relative; 
+}
+
+#submenu{
+    position: absolute;
+    width: 120px;
+    text-align: left;
+    top: 100%;
+    display: none;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    background-color: white;
+    z-index: 11;
+}
+.submenuitem{
+    height: 10px;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#menuitem:hover #submenu{
+    display: block;
+}
+.submenuitem:hover{
+    background-color: rgb(224, 222, 222);
+    cursor: pointer;
+}
+/* ************************************************************FOOTER************************************************* */
+#top-cate{
+    background-color: rgb(218, 218, 218);
+    padding: 20px;
+}
+#top-cate > p{
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom: 0px;
+}
+#top-cate > p span{
+    font-weight: 10;
+}
+#top-cate >hr{
+    border: 1px solid rgb(170, 170, 170);
+    margin: 0px;
+}
+#bottom{
+    background-color: rgb(49, 49, 49);
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+    margin-top: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+#btm-data{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+#btm-data> div:nth-child(1) >h3{
+    width: 210px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+    border-bottom: 4px solid rgb(255, 208, 0);
+}
+#btm-data> div:nth-child(2) >h3{
+    width: 110px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+    border-bottom: 4px solid rgb(255, 208, 0);
+}
+#btm-data> div:nth-child(3) >h3{
+    width: 230px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+    border-bottom: 4px solid rgb(255, 208, 0);
+}
+#btm-data> div >p{
+    font-size: 17px;
+}
+.box6{
+    height: 80px;
+    width: 100%;
+    border: none;
+    border: 1px solid #e42529;
+    background-color: #e42529;
+    margin-top: none;
+}
+.box6>p{
+    margin-top: 15px;
+    color: white;
+    text-align: center;
+}
+
+</style>
+</head>
+<body>
+   <!-- ********************************************NAV-BAR****************************************** -->
+    <div id="nav" data-spy="affix" data-offset-top="197">
+    <div id="logo">
+        <a href="/index.html"><img src="/Picsart_23-01-20_16-48-26-255.png" alt=""></a>
+    </div>
+    <div id="search">
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/48/48688.png" alt="">
+            <!-- <p>Add a vehicle</p> -->
+            <a href="/index.html">Add a vehicle</a>
+            <select></select>
+        </div>
+        <div>
+            <form>
+                <input placeholder="What part do you need today?" type="text">
+            </form>
+            <button type="submit"><img src="https://cdn-icons-png.flaticon.com/512/16/16492.png" alt=""></button>
+        </div>
+    </div>
+    <div id="location">
+        <img src="https://cdn-icons-png.flaticon.com/512/3179/3179068.png" alt="">
+        <p>Choose a Store</p>
+    </div>
+    <a href="/login.html">
+        <div id="account">
+            <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="">
+            <p>Account</p>
+        </div>
+    </a>
+    <div id="cartlogo">
+        <a href="/cart.html"><img src="https://cdn-icons-png.flaticon.com/512/34/34568.png" alt=""></a>
+        <h2 id="item-number">0</h2>
+    </div>
+    </div>
+    <div id="menu">
+    <div id="menuitem">
+        <div id="menu1">
+            <img src="https://cdn-icons-png.flaticon.com/512/9121/9121524.png" alt="">
+        <p>Show All</p>
+        </div>
+        <div id="submenu">
+            <div class="submenuitem">
+                <p>Air & Fuel</p>
+                <h3>></h3>
+            </div>
+            <div class="submenuitem">
+               <p> Accessories</p>
+               <h3>></h3>
+            </div>
+            <div class="submenuitem">
+                <p>Battery</p>
+                <h3>></h3>
+            </div>
+            <div class="submenuitem">
+                <p>Brakes</p>
+                <h3>></h3>
+            </div>
+            <div class="submenuitem">
+                <p>Cooling</p>
+                <h3>></h3>
+            </div>
+            <div class="submenuitem">
+                <p>Navigation</p> 
+                <h3>></h3>
+            </div>
+            <div class="submenuitem">
+                <p>Engines</p>
+                <h3>></h3>
+            </div>
+            <div class="submenuitem">
+                <p>Tools</p>
+                <h3>></h3>
+            </div>
+            <div class="submenuitem">
+                <p>Transmission</p>
+                <h3>></h3>
+            </div>
+        </div>
+    </div>
+    <div>
+        <!-- <p>Replacement Parts</p> -->
+        <a href="/product.html">Replacement Parts</a>
+    </div>
+    <div>
+        <a href="/product.html">Performance Parts</a>
+    </div>
+    <div>
+        <a href="/product.html">Accessories</a>
+    </div>
+    <div>
+        <a href="/product.html">Oil & Fluids</a>
+    </div>
+    <div>
+        <p>Special Offers</p>
+    </div>
+    <div>
+        <p>Order Lookup</p>
+    </div>
+</div>
+
+    <!-- ************************************************LOGIN******************************************* -->
+
+    <div id="container">
+        <div class="boxkg">
+            <div>
+            <h1>Login Here</h1>
+            </div>
+            <div >
+                <form>
+                    <input id="email" type="email"name = "email" size="50"
+                    placeholder="Enter your email id here" aria-required="false" border-radius="5px" height="50px"/>
+                    <a href="index.html"><input  type="submit" value="Login" id="cont" size="60" /></a> 
+                </form>
+                <p class="p1">
+                    NEW CUSTOMER CLICK HERE &nbsp;&nbsp;<a href="/registration.html"><span class="reg" >REGISTER</span>
+                </p>
+            </div>
+        </div> 
+    </div>  
+    
+    
+        <!-- ********************************************FOOTER********************************************** -->
+
+
+        
+<div id="top-cate">
+    <div id="bottom">
+        <div id="btm-data">
+            <div>
+                <h3>CUSTOMER SUPPORT</h3>
+                <p>Accessibility Statement</p>
+                <p>Contact Us</p>
+                <p>Forgot Password</p>
+                <p>Help Desk</p>
+                <p>In Store Pickup</p>
+                <p>In Store Services</p>
+                <p>Order Tracking</p>
+                <p>Recall Information</p>
+                <p>Return Policy</p>
+                <p>Same Day Delivery</p>
+            </div>
+            <div>
+                <h3>ABOUT US</h3>
+                <p>Affiliate Program</p>
+                <p>Career Opportunities</p>
+                <p>Corporation Information</p>
+                <p>Gift Cards</p>
+                <p>Investor Relation</p>
+                <p>2020 Annual Reoprt</p>
+                <p>Safety Data Sheets</p>
+                <p>Press</p>
+                <p>Store Locator</p>
+            </div>
+            <div>
+                <h3>PROFESSIONAL SHOPS</h3>
+                <p>MyAdvance</p>
+                <p>Online Parts Ordering</p>
+                <p>TechNet Professional</p>
+                <p>Technical Training</p>
+                <p>Interactive Vehicle Animation</p>
+                <p>Parts & Products</p>
+                <p>Promotion & Rewards</p>
+                <p>Shop Solutions</p>
+                <p>Find My Mechanic</p>
+            </div>
+        </div>
+    </div>
+
+</div>   
+</body>
+</html>
+<!-- *************************************************JS************************************************** -->
+
+<script>
+    document.querySelector("form").addEventListener("submit",myFunction)
+function myFunction(){
+    event.preventDefault();
+    var logArr = JSON.parse(localStorage.getItem("allUsers")) || []
+var userEmail=document.querySelector("#email").value;
+for(let i=0;i<logArr.length;i++){
+    var email=logArr[i].email
+    if(email==userEmail){
+        window.location.href="index.html"
+        return;
+    }
+}
+alert("Your Account is NOT Register!!");
+}
+</script>
