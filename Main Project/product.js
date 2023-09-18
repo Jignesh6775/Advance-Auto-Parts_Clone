@@ -92,33 +92,24 @@ const data = [
 ]
 
 
-let sortInp = document.getElementById("sort")
-  sortInp.addEventListener("change", ()=>{
+let sortInp = document.getElementById("sort");
+sortInp.addEventListener("change", () => {
     let sortValue = sortInp.value;
-    if(sortValue===""){
-        console.log(data)
-        displayProduct(data)
-    }else if(sortValue == "asc"){
-        data.sort((a, b)=>{
-        return a.price - b.price
-        console.log(data)
-      })
-      
-      displayProduct(data)
-      
-    }else if(sortValue == "desc"){
-        data.sort((a, b)=>{
-        return b.price - a.price
-        
-      })
-      displayProduct(data)
-     
+    if (sortValue === "") {
+        displayProduct(data);
+    } else if (sortValue === "asc") {
+        data.sort((a, b) => {
+            return a.price.localeCompare(b.price);
+        });
+        displayProduct(data);
+    } else if (sortValue === "desc") {
+        data.sort((a, b) => {
+            return b.price.localeCompare(a.price);
+        });
+        displayProduct(data);
     }
-  })
-    // displayProduct(data)
-//   function sortData(data){
-    
-//   }
+});
+
 let productData = JSON.parse(localStorage.getItem("productPage"))||[];
 let container = document.getElementById("product")
 displayProduct(data)
