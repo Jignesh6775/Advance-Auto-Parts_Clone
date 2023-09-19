@@ -1,7 +1,5 @@
 # Advance Auto Parts Clone
 
-Frontend Link: https://advance-auto-parts-clone-git-main-jignesh6775.vercel.app/
-
 It is an E-commerce website for auto parts. It was the first project that I made using HTML, CSS, and JavaScript only. It was an individual project built and executed in 5 days. I added Sort & Filter functionalities using JavaScript. :-
 
     ● HTML
