@@ -415,8 +415,6 @@ a #account > img{
             <br>
             <input class="reg" type="password" name="confirmpassword" id="confirm" placeholder="Confirm Password" size="60"/>
             <br> 
-            <input class="reg" type="text" name="mobile" id="mobile" placeholder="Mobile Number" size="60"/>
-            <br>
             <input  class="but" type="submit" value="Sign Up" size="100"/>
         </form>
         </div>
@@ -457,7 +455,7 @@ a #account > img{
         mobile :document.querySelector("#mobile").value,
         };
         usersArray.push(userObj);
-        localStorage.setItem("allUsers",JSON.stringify(usersArray))
+        sessionStorage.setItem("allUsers",JSON.stringify(usersArray))
         window.location.href="login.html"
 
     }
