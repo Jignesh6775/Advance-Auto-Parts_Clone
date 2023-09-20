@@ -33,3 +33,4 @@ $('.slider').slick({
       // instead of a settings object
     ]
 });
+document.querySelector("#item-number").innerText = cartData.length
